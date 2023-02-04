@@ -1,2 +1,5 @@
 .venv
-example_artists.txt
+*.txt
+!requirements.txt
+downloads
+songs

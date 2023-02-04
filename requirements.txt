@@ -1,0 +1,7 @@
+autopep8==2.0.1
+greenlet==2.0.1
+playwright==1.30.0
+pycodestyle==2.10.0
+pyee==9.0.4
+pytube==12.1.2
+typing_extensions==4.4.0
