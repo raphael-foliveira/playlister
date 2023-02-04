@@ -14,6 +14,10 @@ class Scraper:
     def __init__(self, page: Page):
         self.page = page
 
+    def get_songs_from_artist(self, artist_name: str):
+        raise NotImplementedError(
+            "Scraper does not implement get_songs_from_artist")
+
 
 class YoutubeSearchScraper(Scraper):
 
@@ -24,10 +28,12 @@ class YoutubeSearchScraper(Scraper):
     def get_songs_from_artist(self, artist_name: str):
         self.page.goto(
             f"https://www.youtube.com/results?search_query=" + artist_name.replace(" ", "+"))
-        self.page.wait_for_selector(
-            self.playlist_link_selector, timeout=12000)
 
         try:
+            self.page.wait_for_selector(
+                self.playlist_link_selector,
+                timeout=12000
+            )
             playlist_links = self.page.query_selector_all(
                 self.playlist_link_selector)
 

@@ -8,7 +8,7 @@ from services.song_downloader import SongDownloader
 def main():
     file_reader = FileReader("./sample.txt")
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch()
+        browser = playwright.chromium.launch(headless=False)
         page = browser.new_page()
         downloader = Downloader(
             file_reader,

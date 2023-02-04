@@ -3,13 +3,13 @@ import shutil
 
 from services.file_reader import FileReader
 
-from services.scraper import YoutubeSearchScraper
+from services.scraper import Scraper, YoutubeSearchScraper
 from services.song_downloader import SongDownloader
 
 
 class Downloader:
 
-    def __init__(self, file_reader: FileReader, scraper: YoutubeSearchScraper, song_downloader: SongDownloader, download_dir: str):
+    def __init__(self, file_reader: FileReader, scraper: Scraper, song_downloader: SongDownloader, download_dir: str):
         self.file_reader = file_reader
         self.scraper = scraper
         self.song_downloader = song_downloader
