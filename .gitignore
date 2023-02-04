@@ -3,3 +3,4 @@
 !requirements.txt
 downloads
 songs
+**/__pycache__/
