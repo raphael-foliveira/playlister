@@ -3,7 +3,7 @@ import shutil
 
 from services.file_reader import FileReader
 
-from services.scraper import Scraper, YoutubeSearchScraper
+from services.scraper import Scraper
 from services.song_downloader import SongDownloader
 
 
